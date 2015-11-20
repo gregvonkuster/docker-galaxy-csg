@@ -2,7 +2,7 @@
 #
 # VERSION       0.1
 
-FROM bgruening/galaxy-stable:15.07
+FROM bgruening/galaxy-stable:dev
 
 MAINTAINER Greg Von Kuster, ghv2@psu.edu
 
