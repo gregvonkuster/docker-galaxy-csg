@@ -21,4 +21,5 @@ RUN install-repository \
     "--url https://testtoolshed.g2.bx.psu.edu/ -o greg --name icqsol_create_shape --panel-section-id constructive_solid_geometry" \
     "--url https://testtoolshed.g2.bx.psu.edu/ -o greg --name icqsol_refine_shape --panel-section-id constructive_solid_geometry" \
     "--url https://testtoolshed.g2.bx.psu.edu/ -o greg --name icqsol_rotate_shape --panel-section-id constructive_solid_geometry" \
+    "--url https://testtoolshed.g2.bx.psu.edu/ -o greg --name icqsol_scale_shape --panel-section-id constructive_solid_geometry" \
     "--url https://testtoolshed.g2.bx.psu.edu/ -o greg --name icqsol_translate_shape --panel-section-id constructive_solid_geometry"

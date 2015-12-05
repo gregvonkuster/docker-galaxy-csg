@@ -12,7 +12,7 @@ First you need to install docker for your platform by following the instruction 
 
 After successful installation, do this:
 
-``docker run -d -p 8080:80 gregvonkuster/galaxy-csg:master``
+``docker run -d -p 8080:80 gregvonkuster/docker-galaxy-csg:master``
 
 Consult the [docker manual](http://docs.docker.io/) for detailed information about using docker (its really worth reading).
 
@@ -32,7 +32,7 @@ instance via ``http://localhost:8080`` immediately after executing the command a
 
 For an interactive session, you can execute:
 
-``docker run -i -t -p 8080:80 gregvonkuster/galaxy-csg:master``
+``docker run -i -t -p 8080:80 gregvonkuster/docker-galaxy-csg:master``
 
 and run the ``` startup ``` script yourself to start PostgreSQL, Apache and Galaxy.
 
@@ -40,7 +40,7 @@ The contents of the Container can be changed within a session, but all of your c
 
 Fortunately, this is as easy as:
 
-``docker run -d -p 8080:80 -v /home/user/galaxy_storage/:/export/ gregvonkuster/galaxy-csg:master``
+``docker run -d -p 8080:80 -v /home/user/galaxy_storage/:/export/ gregvonkuster/docker-galaxy-csg:master``
 
 With the additional ``-v /home/user/galaxy_storage/:/export/`` parameter, docker will mount the folder ``/home/user/galaxy_storage`` into the Container under ``/export/``. A ``startup.sh`` script that starts Apache, PostgreSQL and Galaxy within the Container will recognize the export directory with one of the following results:
 
@@ -56,7 +56,7 @@ Enabling Interactive Environments in Galaxy
 Interactive Environments (IE) are sophisticated ways to extend Galaxy with powerful services, like IPython, in a secure and reproducible way.
 For this we need to be able to launch Docker containers inside our Galaxy Docker container. Docker 1.3 or newer is needed on the host system.
 
-``docker run -d -p 8080:80 -p 8021:21 -p 8800:8800 --privileged=true -v /home/user/galaxy_storage/:/export/ gregvonkuster/galaxy-csg:master``
+``docker run -d -p 8080:80 -p 8021:21 -p 8800:8800 --privileged=true -v /home/user/galaxy_storage/:/export/ gregvonkuster/docker-galaxy-csg:master``
 
 The port 8800 is the proxy port that is used to handle Interactive Environments. ``--privileged`` is needed to start docker containers inside docker.
 
@@ -66,7 +66,7 @@ On some linux distributions, Docker-In-Docker can run into issues (such as runni
 you can use a 'legacy' mode that uses a docker socket for the parent docker installation mounted inside the container. To engage, set the 
 environment variable DOCKER_PARENT
 
-``docker run -d -p 8080:80 -p 8021:21 -p 8800:8800 --privileged=true -e DOCKER_PARENT=True -v /var/run/docker.sock:/var/run/docker.sock -v /home/user/galaxy_storage/:/export/ gregvonkuster/galaxy-csg:master``
+``docker run -d -p 8080:80 -p 8021:21 -p 8800:8800 --privileged=true -e DOCKER_PARENT=True -v /var/run/docker.sock:/var/run/docker.sock -v /home/user/galaxy_storage/:/export/ gregvonkuster/docker-galaxy-csg:master``
 
 
 
