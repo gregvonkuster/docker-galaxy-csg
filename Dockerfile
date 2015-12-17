@@ -9,7 +9,6 @@ MAINTAINER Greg Von Kuster, ghv2@psu.edu
 ENV GALAXY_CONFIG_BRAND Galaxy CSG
 ENV GALAXY_CONFIG_ENABLE_BETA_TOOL_COMMAND_ISOLATION True
 
-RUN curl -sL https://github.com/gregvonkuster/galaxy-csg/archive/master.tar.gz | tar xz && cp -r galaxy-csg-master/visualizations/* config/plugins/visualizations/ && rm -rf ./galaxy-csg-master
 RUN add-tool-shed --url 'http://testtoolshed.g2.bx.psu.edu/' --name 'Test Tool Shed'
 
 RUN install-repository \
