@@ -22,4 +22,5 @@ RUN install-repository \
     "--url https://testtoolshed.g2.bx.psu.edu/ -o greg --name icqsol_translate_shape --panel-section-id constructive_solid_geometry" \
     "--url https://testtoolshed.g2.bx.psu.edu/ -o greg --name icqsol_add_surface_field_from_expression --panel-section-id constructive_solid_geometry" \
     "--url https://testtoolshed.g2.bx.psu.edu/ -o greg --name icqsol_color_surface_field --panel-section-id constructive_solid_geometry" \
-    "--url https://testtoolshed.g2.bx.psu.edu/ -o greg --name icqsol_add_texture --panel-section-id constructive_solid_geometry"
+    "--url https://testtoolshed.g2.bx.psu.edu/ -o greg --name icqsol_add_texture --panel-section-id constructive_solid_geometry" \
+    "--url https://testtoolshed.g2.bx.psu.edu/ -o greg --name icqsol_solve_laplace --panel-section-id constructive_solid_geometry"
