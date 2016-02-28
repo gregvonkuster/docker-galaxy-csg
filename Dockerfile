@@ -2,15 +2,14 @@
 #
 # VERSION       0.1
 
-FROM bgruening/galaxy-stable:16.01
+FROM quay.io/bgruening/galaxy:16.01
 
 MAINTAINER Greg Von Kuster, ghv2@psu.edu
 
-RUN add-tool-shed --url 'https://testtoolshed.g2.bx.psu.edu/' --name 'Test Tool Shed'
 ENV GALAXY_CONFIG_BRAND Galaxy CSG
 ENV GALAXY_CONFIG_ENABLE_BETA_TOOL_COMMAND_ISOLATION True
 
-RUN add-tool-shed --url 'http://testtoolshed.g2.bx.psu.edu/' --name 'Test Tool Shed'
+RUN add-tool-shed --url 'https://testtoolshed.g2.bx.psu.edu/' --name 'Test Tool Shed'
 
 RUN install-repository \
     "--url https://testtoolshed.g2.bx.psu.edu/ -o iuc --name package_cmake_3_2_3" \
