@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/bgruening/docker-galaxy-csg.svg?branch=master)](https://travis-ci.org/bgruening/docker-galaxy-csg)
+
 # docker-galaxy-csg
 Galaxy workbench for Constructive Solid Geometry (Galaxy CSG flavour)
 ============================================================
