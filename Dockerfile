@@ -11,7 +11,7 @@ ENV GALAXY_CONFIG_ENABLE_BETA_TOOL_COMMAND_ISOLATION True
 
 RUN add-tool-shed --url 'https://testtoolshed.g2.bx.psu.edu/' --name 'Test Tool Shed'
 
-# Install deepTools
+# Install CSG tools
 ADD csg.yaml $GALAXY_ROOT/tools.yaml
 RUN sleep 10
 RUN install-tools $GALAXY_ROOT/tools.yaml
