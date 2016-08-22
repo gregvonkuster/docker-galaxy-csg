@@ -2,12 +2,14 @@
 #
 # VERSION       0.1
 
-FROM quay.io/bgruening/galaxy:16.04
+FROM bgruening/galaxy-stable:dev
 
 MAINTAINER Greg Von Kuster, ghv2@psu.edu
 
-ENV GALAXY_CONFIG_BRAND Galaxy CSG
-ENV GALAXY_CONFIG_ENABLE_BETA_TOOL_COMMAND_ISOLATION True
+ENV GALAXY_CONFIG_BRAND Galaxy CSG \
+    GALAXY_CONFIG_ENABLE_BETA_TOOL_COMMAND_ISOLATION True \
+    GALAXY_CONFIG_CONDA_AUTO_INSTALL True \
+    GALAXY_CONFIG_CONDA_AUTO_INIT True
 
 RUN add-tool-shed --url 'https://testtoolshed.g2.bx.psu.edu/' --name 'Test Tool Shed'
 

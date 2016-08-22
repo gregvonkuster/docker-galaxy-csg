@@ -42,79 +42,65 @@ galaxy_instance: http://localhost:8080
 tools:
 
 - name: icqsol_add_surface_field_from_expression
-  owner: greg
+  owner: iuc
   tool_panel_section_label: "Constructive_Solid_Geometry"
   tool_shed_url: https://testtoolshed.g2.bx.psu.edu
   revisions:
-    - 5fa6da075198
-
-- name: icqsol_add_texture
-  owner: greg
-  tool_panel_section_label: "Constructive_Solid_Geometry"
-  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
-  revisions:
-    - 44bb7f3c1c61
+    - c9084b340a89
 
 - name: icqsol_coarsen_shape
-  owner: greg
+  owner: iuc
   tool_panel_section_label: "Constructive_Solid_Geometry"
   tool_shed_url: https://testtoolshed.g2.bx.psu.edu
   revisions:
-    - 7da9e9b19e7b
+    - d2d60c27dbd3
 
 - name: icqsol_color_surface_field
-  owner: greg
+  owner: iuc
   tool_panel_section_label: "Constructive_Solid_Geometry"
   tool_shed_url: https://testtoolshed.g2.bx.psu.edu
   revisions:
-    - 076ff1968c8b
+    - 54ac75a88fb0
 
 - name: icqsol_compose_shapes
-  owner: greg
+  owner: iuc
   tool_panel_section_label: "Constructive_Solid_Geometry"
   tool_shed_url: https://testtoolshed.g2.bx.psu.edu
   revisions:
-    - 2ea276661f42
+    - 1892d351c00c
 
 - name: icqsol_create_shape
-  owner: greg
+  owner: iuc
   tool_panel_section_label: "Constructive_Solid_Geometry"
   tool_shed_url: https://testtoolshed.g2.bx.psu.edu
   revisions:
-    - 15e64b9e9f01
+    - 7f3da64cce60
 
 - name: icqsol_refine_shape
-  owner: greg
+  owner: iuc
   tool_panel_section_label: "Constructive_Solid_Geometry"
   tool_shed_url: https://testtoolshed.g2.bx.psu.edu
   revisions:
-    - 3453c0dc27f2
+    - ee1928e36fb4
 
 - name: icqsol_rotate_shape
-  owner: greg
+  owner: iuc
   tool_panel_section_label: "Constructive_Solid_Geometry"
   tool_shed_url: https://testtoolshed.g2.bx.psu.edu
   revisions:
-    - e34a6bd0bd31
+    - 06a624817e59
 
 - name: icqsol_scale_shape
-  owner: greg
+  owner: iuc
   tool_panel_section_label: "Constructive_Solid_Geometry"
   tool_shed_url: https://testtoolshed.g2.bx.psu.edu
   revisions:
-    - 3f757911bd4a
-
-- name: icqsol_solve_laplace
-  owner: greg
-  tool_panel_section_label: "Constructive_Solid_Geometry"
-  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
-  revisions:
-    - 52b976a35f8c
+    - 01a6fde5bedd
 
 - name: icqsol_translate_shape
-  owner: greg
+  owner: iuc
   tool_panel_section_label: "Constructive_Solid_Geometry"
   tool_shed_url: https://testtoolshed.g2.bx.psu.edu
   revisions:
-    - 18c31466e9cd
+    - 314d7cc320b3
 
