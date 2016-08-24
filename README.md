@@ -1,22 +1,30 @@
-[![Build Status](https://travis-ci.org/bgruening/docker-galaxy-csg.svg?branch=master)](https://travis-ci.org/bgruening/docker-galaxy-csg)
+[![Docker Repository on Quay](https://quay.io/repository/gregvonkuster/galaxy-csg/status "Docker Repository on Quay")](https://quay.io/repository/gregvonkuster/galaxy-csg)
+[![Build Status](https://travis-ci.org/gregvonkuster/docker-galaxy-csg.svg?branch=master)](https://travis-ci.org/gregvonkuster/docker-galaxy-csg)
 
 # docker-galaxy-csg
 Galaxy workbench for Constructive Solid Geometry (Galaxy CSG flavor)
-============================================================
+====================================================================
 
 Galaxy instance with tools for Constructive Solid Geometry shipped in a Docker container. :whale:
-
 
 Usage
 =====
 
 First you need to install docker for your platform by following the instruction at https://docs.docker.com/installation/
 
-After successful installation, do this:
+If running on OS X (skip this if running on Linux), after successful installation, get the default IP address used by docker:
+
+``docker-machine ip default``
+
+The above command should display an IP address like this:
+
+``192.168.99.100``
+
+Now do this (no matter the OS):
 
 ``docker run -d -p 8080:80 gregvonkuster/docker-galaxy-csg``
 
-Consult the [docker manual](http://docs.docker.io/) for detailed information about using docker (its really worth reading).
+Consult the [docker manual](http://docs.docker.io/) for detailed information about using docker (it is really worth reading).
 
 Quick start:
 ``docker run`` will run the Image/Container for you. If you do not have the Container stored locally, docker will download it for you.
@@ -25,16 +33,17 @@ Quick start:
 
 ``-p 8080:80`` will make port 80 (inside the container) available on port 8080 of your computer.  Within the container an Apache Webserver
 is running on port 80 and that port can be bound to a local port on your computer.  With this parameter you can access your Galaxy
-instance via ``http://localhost:8080`` immediately after executing the command above.
+instance by pointing your browser to ``http://localhost:8080`` if running on Linux.  On OS X use the default docker IP address you
+discovered above (e.g., ``http://192.168.99.100``).
 
 ``gregvonkuster/galaxy-csg`` is the Image/Container name that directs docker to the correct path in the
-[docker index](https://index.docker.io/u/gregvonkuster/galaxy-csg/).
+[docker index](https://index.docker.io/u/gregvonkuster/galaxy-ChIP-exo/).
 
-``:master`` is the specific tag of the Image/Container that will be pulled from the [docker index](https://index.docker.io/u/gregvonkuster/galaxy-csg/) and run.
+``:master`` is the specific tag of the Image/Container that will be pulled from the [docker index](https://index.docker.io/u/gregvonkuster/galaxy-ChIP-exo/) and run.
 
 For an interactive session, you can execute:
 
-``docker run -i -t -p 8080:80 gregvonkuster/docker-galaxy-csg``
+``docker run -i -t -p 8080:80 gregvonkuster/docker-galaxy-csg /bin/bash``
 
 and run the ``` startup ``` script yourself to start PostgreSQL, Apache and Galaxy.
 
@@ -46,11 +55,20 @@ Fortunately, this is as easy as:
 
 With the additional ``-v /home/user/galaxy_storage/:/export/`` parameter, docker will mount the folder ``/home/user/galaxy_storage`` into the Container under ``/export/``. A ``startup.sh`` script that starts Apache, PostgreSQL and Galaxy within the Container will recognize the export directory with one of the following results:
 
-  - In case of an empty ``/export/`` directory, it will move the [PostgreSQL](http://www.postgresql.org/) database, the Galaxy database directory, Shed Tools and Tool Dependencies and various configuration scripts to /export/ and symlink back to the original location.
+  - In case of an empty ``/export/`` directory, it will move the [PostgreSQL](http://www.postgresql.org/) database, the Galaxy database directory, Shed Tools, Tool Dependencies and various configuration scripts to /export/ and symlink back to the original location.
   - In case of a non-empty ``/export/``, (e.g.,if you continue a previous session within the same folder) nothing will be moved, but the symlinks will be created.
 
 This enables you to have different export folders for different sessions - i.e., real separation of your different projects.
 
+
+With the additional ``-v /home/user/galaxy_storage/:/export/`` parameter, docker will mount the folder ``/home/user/galaxy_storage``
+into the Container under ``/export/``. A ``startup.sh`` script that starts Apache, PostgreSQL and Galaxy will recognize the export
+directory with one of the following results:
+
+  - In case of an empty ``/export/`` directory, it will move the [PostgreSQL](http://www.postgresql.org/) database, the Galaxy database directory, Shed Tools and Tool Dependencies and various config scripts to /export/ and symlink back to the original location.
+  - In case of a non-empty ``/export/`` (e.g., if you continue a previous session within the same folder), nothing will be moved, but the symlinks will be created.
+
+This enables you to have different export folders for different sessions - i.e., real separation of your different projects.
 
 Enabling Interactive Environments in Galaxy
 -------------------------------------------
@@ -70,8 +88,6 @@ environment variable DOCKER_PARENT
 
 ``docker run -d -p 8080:80 -p 8021:21 -p 8800:8800 --privileged=true -e DOCKER_PARENT=True -v /var/run/docker.sock:/var/run/docker.sock -v /home/user/galaxy_storage/:/export/ gregvonkuster/docker-galaxy-csg``
 
-
-
 Users & Passwords
 ================
 
@@ -79,33 +95,26 @@ The Galaxy Admin User has the username ``admin@galaxy.org`` and the password ``a
 The PostgreSQL username is ``galaxy``, the password is ``galaxy`` and the database name is ``galaxy``.
 To create new users, make sure to use the ``/export/`` volume or the user will be eliminated after your docker session ends.
 
-
 Requirements
 ============
 
 - [docker](https://docs.docker.com/installation/)
-
 
 Contributers
 ============
 
  - Bjoern Gruening
  - Greg von Kuster
- - Alex Pletzer
-
 
 History
 =======
 
  - 0.1: Initial release!
 
-
 Support & Bug Reports
 =====================
 
-For support, questions, or feature requests please see https://github.com/gregvonkuster/galaxy-csg/issues.
-
-
+For support, questions, or feature requests please see https://github.com/gregvonkuster/galaxy-ChIP-exo/issues.
 
 Licence (MIT)
 =============
