@@ -1,8 +1,8 @@
-# Galaxy - Constructive Solid Geometry flavor
+# Galaxy Constructive Solid Geometry flavor
 #
 # VERSION       0.1
 
-FROM bgruening/galaxy-stable:dev
+FROM quay.io/bgruening/galaxy:16.04
 
 MAINTAINER Greg Von Kuster, ghv2@psu.edu
 
@@ -11,7 +11,7 @@ ENV GALAXY_CONFIG_BRAND Galaxy CSG \
     GALAXY_CONFIG_CONDA_AUTO_INSTALL True \
     GALAXY_CONFIG_CONDA_AUTO_INIT True
 
-RUN add-tool-shed --url 'https://testtoolshed.g2.bx.psu.edu/' --name 'Test Tool Shed'
+RUN add-tool-shed --url 'https://toolshed.g2.bx.psu.edu/' --name 'Main Tool Shed'
 
 # Install CSG tools
 ADD csg.yaml $GALAXY_ROOT/tools.yaml
