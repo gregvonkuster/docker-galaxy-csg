@@ -1,7 +1,7 @@
-[![Docker Repository on Quay](https://quay.io/repository/gregvonkuster/galaxy-csg/status "Docker Repository on Quay")](https://quay.io/repository/gregvonkuster/galaxy-csg)
 [![Build Status](https://travis-ci.org/gregvonkuster/docker-galaxy-csg.svg?branch=master)](https://travis-ci.org/gregvonkuster/docker-galaxy-csg)
+[![Docker Repository on Quay](https://quay.io/repository/gregvonkuster/galaxy-csg/status "Docker Repository on Quay")](https://quay.io/repository/gregvonkuster/galaxy-csg)
+[![](https://images.microbadger.com/badges/image/gregvonkuster/docker-galaxy-csg.svg)](https://microbadger.com/images/gregvonkuster/docker-galaxy-csg "Get your own image badge on microbadger.com")
 
-# docker-galaxy-csg
 Galaxy workbench for Constructive Solid Geometry (Galaxy CSG flavor)
 ====================================================================
 
