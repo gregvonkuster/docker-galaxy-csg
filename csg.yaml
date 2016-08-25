@@ -11,7 +11,7 @@ tools:
 
 - name: icqsol_add_texture
   owner: iuc
-  new_tool_panel_section_label: "Constructive Solid Geometry"
+  tool_panel_section_id: "constructive_solid_geometry"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   revisions:
     - d6bbaddfa5af
