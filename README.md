@@ -37,9 +37,9 @@ instance by pointing your browser to ``http://localhost:8080`` if running on Lin
 discovered above (e.g., ``http://192.168.99.100``).
 
 ``gregvonkuster/galaxy-csg`` is the Image/Container name that directs docker to the correct path in the
-[docker index](https://index.docker.io/u/gregvonkuster/galaxy-ChIP-exo/).
+[docker index](https://index.docker.io/u/gregvonkuster/galaxy-csg/).
 
-``:master`` is the specific tag of the Image/Container that will be pulled from the [docker index](https://index.docker.io/u/gregvonkuster/galaxy-ChIP-exo/) and run.
+``:master`` is the specific tag of the Image/Container that will be pulled from the [docker index](https://index.docker.io/u/gregvonkuster/galaxy-csg/) and run.
 
 For an interactive session, you can execute:
 
@@ -114,7 +114,7 @@ History
 Support & Bug Reports
 =====================
 
-For support, questions, or feature requests please see https://github.com/gregvonkuster/galaxy-ChIP-exo/issues.
+For support, questions, or feature requests please see https://github.com/gregvonkuster/galaxy-csg/issues.
 
 Licence (MIT)
 =============
