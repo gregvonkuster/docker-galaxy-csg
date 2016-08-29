@@ -4,7 +4,7 @@ tools:
 
 - name: icqsol_add_surface_field_from_expression
   owner: iuc
-  new_tool_panel_section_label: "Constructive Solid Geometry"
+  tool_panel_section_label: "Constructive Solid Geometry"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   revisions:
     - e12b55e960de
