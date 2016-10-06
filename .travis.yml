@@ -15,16 +15,16 @@ git:
 before_install:
   - wget https://raw.githubusercontent.com/bgruening/galaxy-flavor-testing/master/Makefile
   - make docker_install
-  travis wait 45
-  sudo apt-get DEBIAN-FRONTEND=nointeractive \
-  apt-get install -y \
-  libgl1-mesa-dri \
-  x11-xserver-utils \
-  x11vnc \
-  xinit \
-  xserver-xorg-video-dummy \
-  xserver-xorg-input-void \
-  && rm -f /usr/share/applications/x11vnc.desktop
+  - travis wait 45
+  - sudo apt-get DEBIAN-FRONTEND=nointeractive \
+    apt-get install -y \
+    libgl1-mesa-dri \
+    x11-xserver-utils \
+    x11vnc \
+    xinit \
+    xserver-xorg-video-dummy \
+    xserver-xorg-input-void \
+    && rm -f /usr/share/applications/x11vnc.desktop
   - travis_wait 45 make docker_build
   - make docker_run
   - sleep 30
