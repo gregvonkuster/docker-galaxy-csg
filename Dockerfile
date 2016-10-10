@@ -6,7 +6,7 @@ FROM quay.io/bgruening/galaxy:master
 
 MAINTAINER Greg Von Kuster, ghv2@psu.edu
 
-RUN apt-get -qq update && apt-get install --no-install-recommends -y libgl1-mesa-dev libgl1-mesa-dri x11-xserver-utils x11vnc xinit xserver-xorg-video-dummy xserver-xorg-input-void\
+RUN apt-get -qq update && apt-get install --no-install-recommends -y libgl1-mesa-dev libgl1-mesa-dri x11-xserver-utils x11vnc xinit xserver-xorg-video-dummy xserver-xorg-input-void
 
 ENV GALAXY_CONFIG_BRAND="Galaxy CSG" \
     GALAXY_CONFIG_ENABLE_BETA_TOOL_COMMAND_ISOLATION=True \
