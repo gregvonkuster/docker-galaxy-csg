@@ -17,6 +17,6 @@ ENV GALAXY_CONFIG_BRAND="Galaxy CSG" \
 RUN add-tool-shed --url 'https://toolshed.g2.bx.psu.edu/' --name 'Main Tool Shed'
 
 # Install CSG tools
-ADD csg.yml $GALAXY_ROOT/tools.yaml
+ADD csg.yaml $GALAXY_ROOT/tools.yaml
 RUN install-tools $GALAXY_ROOT/tools.yaml && \
     /tool_deps/_conda/bin/conda clean --tarballs
