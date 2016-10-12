@@ -14,11 +14,8 @@ git:
 
 before_install:
   - wget https://raw.githubusercontent.com/bgruening/galaxy-flavor-testing/master/Makefile
-  - sudo apt-get update -qq
-  - sudo apt-get install docker-engine --no-install-recommends -y -o Dpkg::Options::="--force-confmiss" -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew"
-  - sudo apt-get install --no-install-recommends -y libgl1-mesa-dev libgl1-mesa-dri x11-xserver-utils x11vnc xinit xserver-xorg-video-dummy xserver-xorg-input-void
-  - docker --version
-  - docker info
+  - make docker_install
+  - sudo apt-get install --no-install-recommends -y libgl1-mesa-dev libgl1-mesa-dri libglu1-mesa x11-xserver-utils x11vnc xinit xserver-xorg-video-dummy xserver-xorg-input-void
   - travis_wait 45 make docker_build
   - make docker_run
   - sleep 30
