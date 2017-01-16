@@ -7,6 +7,7 @@ tools:
   tool_panel_section_label: "Constructive Solid Geometry"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
+  install_tool_dependencies: False
   revisions:
     - e12b55e960de
 
@@ -15,6 +16,7 @@ tools:
   tool_panel_section_id: "constructive_solid_geometry"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
+  install_tool_dependencies: False
   revisions:
     - d6bbaddfa5af
 
@@ -23,6 +25,7 @@ tools:
   tool_panel_section_id: "constructive_solid_geometry"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
+  install_tool_dependencies: False
   revisions:
     - 6ff7cf6ec553
 
@@ -31,6 +34,7 @@ tools:
   tool_panel_section_id: "constructive_solid_geometry"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
+  install_tool_dependencies: False
   revisions:
     - aceda40ef311
 
@@ -39,6 +43,7 @@ tools:
   tool_panel_section_id: "constructive_solid_geometry"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
+  install_tool_dependencies: False
   revisions:
     - 1574fdcc16df
 
@@ -55,6 +60,7 @@ tools:
   tool_panel_section_id: "constructive_solid_geometry"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
+  install_tool_dependencies: False
   revisions:
     - d543f7bbe8da
 
@@ -63,6 +69,7 @@ tools:
   tool_panel_section_id: "constructive_solid_geometry"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
+  install_tool_dependencies: False
   revisions:
     - f63d4da328a3
 
@@ -71,6 +78,7 @@ tools:
   tool_panel_section_id: "constructive_solid_geometry"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
+  install_tool_dependencies: False
   revisions:
     - e3bce7e46736
 
@@ -79,6 +87,7 @@ tools:
   tool_panel_section_id: "constructive_solid_geometry"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
+  install_tool_dependencies: False
   revisions:
     - 2294ae1842d5
 
@@ -87,5 +96,6 @@ tools:
   tool_panel_section_id: "constructive_solid_geometry"
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
+  install_tool_dependencies: False
   revisions:
     - 88af59c4a2e5
