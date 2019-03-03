@@ -1,6 +1,6 @@
 # Galaxy Constructive Solid Geometry flavor
 
-FROM bgruening/galaxy-stable:17.05
+FROM bgruening/galaxy-stable:19.01
 
 MAINTAINER Greg Von Kuster, ghv2@psu.edu
 
